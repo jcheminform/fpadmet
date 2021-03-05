@@ -8,7 +8,6 @@ RSCRIPT="/usr/bin/Rscript"
 PREDICTIONSCRIPTS="PREDICTORS/"
 FPOUT="RESULTS/fps.txt"
 PREDOUT="RESULTS/predicted.txt"
-
 #==============================================================================
 
 NO_ARGS=0
@@ -21,9 +20,9 @@ BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
 function usage() {
-   echo "Usage: $0 [-f <smi file>] [-p <property>] [-h <help>] [-a <calculate ADAN>] [-o <output file>] [-n <# CPUs to use>] "; exit $E_OPTERROR;
+   echo "Usage: $0 [-f <smi file>] [-p <property>] [-h <help>] [-a <calculate ADAN>]"; exit $E_OPTERROR;
    echo "=================================================================="
-   echo "Provide the number correspondingt to the property to be predicted"
+   echo "Provide the number corresponding to the property to be predicted"
    echo "=================================================================="
    echo " 1: Anticommensal Effect on Human Gut Microbiota"
    echo " 2: Blood–brain-barrier penetration"
