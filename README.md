@@ -23,3 +23,9 @@ bash installpackages.sh caret
 bash installpackages.sh quantregForest
 bash installpackages.sh randomForest
 ```
+
+## Using FPADMET
+```
+bash runadmet.sh -f molecule.smi -p ## -a 
+```
+
