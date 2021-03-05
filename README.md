@@ -15,3 +15,11 @@ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 sudo apt update
 sudo apt install r-base
 ```
+
+## R package installation
+```
+bash installpackages.sh ranger
+bash installpackages.sh caret
+bash installpackages.sh quantregForest
+bash installpackages.sh randomForest
+```
