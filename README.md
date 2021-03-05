@@ -29,7 +29,9 @@ bash installpackages.sh randomForest
 bash runadmet.sh -f molecule.smi -p ## -a 
 ```
 where ## can be one of the following:
- 1: Anticommensal Effect on Human Gut Microbiota
+
+```
+1: Anticommensal Effect on Human Gut Microbiota
  2: Blood–brain-barrier penetration
  3: Oral Bioavailability
  4: AMES Mutagenecity
@@ -70,5 +72,6 @@ where ## can be one of the following:
 52: logS
 53: Drug affinity to human serum albumin
 54: MDCK permeability
+```
 
 
