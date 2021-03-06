@@ -50,8 +50,11 @@ where ## can be one of the following:
 17: Toxic Myopathy
 18: Phospholipidosis
 19: Human Bile Salt Export Pump Inhibition
-20: Organic anion transporting polypeptide 1B1/1B3/2B1 binding
-23: Phototoxicity human/in vitro
+20: Organic anion transporting polypeptide 1B1 binding
+21: Organic anion transporting polypeptide 1B3 binding
+22: Organic anion transporting polypeptide 2B1 binding
+23: Phototoxicity human
+24: Phototoxicity in vitro
 25: Respiratory Toxicity
 26: P-glycoprotein Inhibition
 27: P-glycoprotein Substrate
@@ -64,9 +67,19 @@ where ## can be one of the following:
 34: Organic Cation Transporter 2 Inhibition
 35: Drug-induced Ototoxicity
 36: Rhabdomyolysis
-37: T1/2 Human/Mouse/Rat
-40: Cytotoxicity HepG2/NIH 3T3/HEK 293/CRL-7250/HaCat cell line
-45: CYP450 1A2/2C19/2D6/3A4/2C9 Inhibition
+37: T1/2 Human
+38: T1/2 Mouse
+39: T1/2 Rat
+40: Cytotoxicity HepG2 cell line
+41: Cytotoxicity NIH 3T3 cell line
+42: Cytotoxicity HEK 293 cell line
+43: Cytotoxicity CRL-7250 cell line
+44: Cytotoxicity HaCat cell line
+45: CYP450 1A2 Inhibition
+46: CYP450 2C19 Inhibition
+47: CYP450 2C9 Inhibition
+48: CYP450 2D6 Inhibition
+49: CYP450 3A4 Inhibition
 50: pKa dissociation constant
 51: logD Distribution coefficient (pH 7.4)
 52: logS
