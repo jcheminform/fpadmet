@@ -72,6 +72,7 @@ where ## can be one of the following:
 52: logS
 53: Drug affinity to human serum albumin
 54: MDCK permeability
+55: 50% hemolytic dose
 ```
 
 
