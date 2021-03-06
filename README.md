@@ -28,7 +28,9 @@ bash installpackages.sh randomForest
 ```
 bash runadmet.sh -f molecule.smi -p ## -a 
 ```
-where ## can be one of the following:
+**where "##" can be one of the following:**
+
+The input is a file containing SMILES strings. The "-a" option allows for the calculation of prediction uncertainty (in the case of regression) and confidence (for classification). 
 
 ```
  1: Anticommensal Effect on Human Gut Microbiota
