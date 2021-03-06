@@ -25,12 +25,15 @@ bash installpackages.sh randomForest
 ```
 
 ## Using FPADMET
+
+Usage of FPADMET is governed by a bash script. The input to the script is a file containing SMILES strings. The "-a" option allows for the calculation of prediction uncertainty (in the case of regression) and confidence (for classification). The output files are written to the **RESULTS** directory.
+
 ```
 bash runadmet.sh -f molecule.smi -p ## -a 
 ```
 **where "##" can be one of the following:**
 
-The input is a file containing SMILES strings. The "-a" option allows for the calculation of prediction uncertainty (in the case of regression) and confidence (for classification). 
+
 
 ```
  1: Anticommensal Effect on Human Gut Microbiota
