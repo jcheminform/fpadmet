@@ -20,12 +20,12 @@ BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 
 function usage() {
-   echo "Usage: $0 [-f <smi file>] [-p <property>] [-h <help>] [-a <calculate ADAN>]"; exit $E_OPTERROR;
+   echo "Usage: $0 [-f <smi file>] [-p <property>] [-h <help>] [-a <calculate prediction uncertainty>]"; exit $E_OPTERROR;
    echo "=================================================================="
    echo "Provide the number corresponding to the property to be predicted"
    echo "=================================================================="
    echo " 1: Anticommensal Effect on Human Gut Microbiota"
-   echo " 2: Blood–brain-barrier penetration"
+   echo " 2: Bloodâ€“brain-barrier penetration"
    echo " 3: Oral Bioavailability"
    echo " 4: AMES Mutagenecity"
    echo " 5: Metabolic Stability"
@@ -115,7 +115,7 @@ case $ptype in
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_anticommensal.R" $FPOUT $PREDOUT $adan 
         retcode=$?
         ;; 
-    2)  echo "Blood–brain-barrier penetration"
+    2)  echo "Bloodâ€“brain-barrier penetration"
         $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_bbbp.R" $FPOUT $PREDOUT $adan 
         retcode=$?
@@ -385,7 +385,8 @@ case $ptype in
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_HD50.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
-    *) echo "ERROR: Ill-defined task number."
+    *)  echo "ERROR: Ill-defined task number."
+		usage;
         exit $E_OPTERROR
         ;;
 esac
