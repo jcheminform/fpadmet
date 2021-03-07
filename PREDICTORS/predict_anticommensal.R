@@ -23,11 +23,7 @@ fitModel = function(trainingSet=NULL, method = "rf",  nrTrees = 100)
     	return(NULL)
   	}
 
-  	#the first colum should be class labels, labeled as 1, 2, ...
-  	#names(trainingSet)[1] <- "Y"
-
-  	#trainingSet$Y <- as.factor(trainingSet$Y)
-
+  	
   	rfModel <- randomForest(Y ~ ., data = trainingSet, ntree = nrTrees, norm.votes = TRUE, keep.forest = TRUE, predict.all = TRUE, type = "classification")
 
   	return(rfModel)
@@ -122,38 +118,6 @@ ICPClassification = function(trainingSet, testSet, ratioTrain = 0.7, method = "r
   	return(pValues)
 }
 
-#' Class-conditional transductive conformal classifier for multi-class problems
-#' @param trainSet Training set
-#' @param testSet Test set
-#' @param method Method for modeling
-#' @param nrTrees Number of trees for RF
-#' @return The p-values
-#' @export
-TCPClassification = function(trainSet, testSet, method = "rf", nrTrees = 100)
-{
-  	if(is.null(trainSet) || is.null(testSet) )
-  	{
-    	stop("\n 'trainingSet' and 'testSet' are required as input\n")
-  	}
-
-  	nrTestCases = nrow(testSet)
-  	nrLabels = length(unique(testSet[, 1]))
-  	pValues = matrix(0, nrTestCases, nrLabels)
-
-  	for(i in 1:nrLabels){
-    	clsLabel = i
-    	for(k in 1:nrTestCases)
-    	{
-      		tempTestCase = testSet[k, ]
-      		tempTestCase[1]= clsLabel
-      		tcpTrainSet = rbind(trainSet, tempTestCase)
-      		pValues[k, i] = tcpPValues(tcpTrainSet, method = method, nrTrees = nrTrees)
-    	}
-  	}
-  	return(pValues)
-}
-
-
 #' calculate pvalues using conformal
 #' @model the trained caret model
 #' @newdata test data
@@ -185,7 +149,7 @@ applyadan = as.logical(as.integer(args[3]))
 fittedmodel <- readRDS("MODELS/model_anticommensal_pubchem.rds")
 
 
-X = read.csv(fpfile, header=F, row.names=1, colClasses = "factor")
+X = read.csv(fpfile, header=F, row.names=1, colClasses = "factor", stringsAsFactors = FALSE)
 yhat <- predict(fittedmodel, newdata = X)
 
 # Inductive Conformal Prediction: Theory and Application to Neural Networks, Harris Papadopoulos
