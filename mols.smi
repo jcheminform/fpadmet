@@ -6,7 +6,6 @@ Brc1ccc(cc1)[IH]c1ccccc1	M89009
 COc1cc(ccc1OC)[IH]c1ccccc1C(=O)O	M89010
 c1ccc(cc1)[IH]c1ccccc1	M89011
 COc1ccc(cc1Cl)[IH]c1cccc(c1)Cl	M89012
-Oc1nc2ccccc2c(c1[IH]c1ccccc1)O	M89013
 O=C(c1ccccc1)C[n+]1[nH]c(=N)n2c1sc(n2)c1ccccc1	M89020
 COc1ccc2c(c1)CC[N+]1=C3C(=C(O)CCC3)CCC21	M89021
 Cc1cc(C)c2c(c1)Nc1c(P2c2ccccc2)cccc1	M89022
@@ -47,11 +46,9 @@ CCOC(=O)N1C(C)C(C)C=C(c2c1cccc2)C	M89056
 O=c1[nH]c(=O)c2c([nH]1)cn1c2CCCCC1	M89057
 COC(=O)C12CCC34C5C2(C(CN5CCC3)C(=O)C4)c2c(N1C(=O)OC)c1OCOc1cc2	M89058
 Cl[I](c1ccc(cc1)[N+](=O)[O-])Cl	M89059
-O=C1c2ccccc2C(=O)C21CCc1c2cccc1	M89060
 COc1cc(C)c2c(c1)oc1c(c2=O)C(=O)c2c(C1=O)c(OC)c(cc2OC)OC	M89061
 CCN1c2nnc(n2S(=O)(=O)c2c1cccc2)Cc1ccccc1	M89062
 NCCN1C(=O)C2C(C1=O)(C)C1c3c(C2c2c1cccc2)cccc3	M89063
-COC(=O)c1c2CC3(Cc2cc2c1CCC2)Cc1c(C3=O)cc2c(c1)CCC2	M89064
 ClCCN1c2ccccc2Sc2c1c1ccccc1cc2	M89065
 CCOC(=O)CCN(c1cc(O)c2c(c1O)C(=O)c1c(C2=O)cccc1)CC1CCC=CC1	M89066
 Fc1ccc(cc1)C1N2C(=NC3=C1c1ccccc1C3=O)SC(C2=O)C	M89067
@@ -84,8 +81,6 @@ On1c(c2ccccc2)c(c2c1cccc2)c1ccccc1N1CCCC1	M88951
 Oc1cc2ccccc2cc1OC(c1nc2c(o1)cccc2)(F)F	M88952
 COc1cccc2c1OC(=O)C(C2)S(=O)(=O)c1ccccc1	M88953
 Fc1ccccc1C=C1Cc2c(C1=O)cccc2	M88954
-CCOCC1=C2C(=CC3(C)CCC(C(CC2OC(=O)C(=C)C)(C)O)(O3)O)OC1=O	M88955
-c1ccc2c(-c3ccccc3C3C2N3)c1	M88956
 N#CC(=C1SC(c2c1cccc2)(c1ccc(cc1)C)c1ccc(cc1)C)C#N	M88957
 CC1C=C(C)c2c(N(C1C)CCNS(=O)(=O)c1ccc(cc1)C)cccc2	M88958
 Clc1ccc(cc1)N1C2=C(N=Nc3ccc(cc3)Br)C(=Nc3c(S2)cccc3)N(C1=S)c1ccc(cc1)Br	M88959
@@ -97,3 +92,9 @@ S(Cc1nnc2n1cccc2)Cc1nnc2n1cccc2	M88964
 O=C1N(c2ccccc2)C(=O)C2C1C1SC2c2c1cc1c(c2)cccc1	M88965
 COc1cc2CCN(C3c2c(-c2c(OC)cccc2C3)c1O)C	M88966
 [O-][N+](=O)c1ccc(cc1)C=C1Cc2c(C1=O)cccc2	M88967
+OCC1OC(C(C1O)O)n1cnc2c1nc(N)nc2[Se]c1nc(N)nc2c1ncn2C1OC(C(C1O)O)CO	M45321
+[O-][N+](=O)c1ccc2c(c1)Oc1c([Se]2)nccc1	M45322
+c1ccc(cc1)c1ccccc1[Se][Se]c1ccccc1c1ccccc1	M45323
+CCOC(=O)C([Se]c1ccccc1)SC#N	M45326
+FC1(F)[Se]C2C(C1(F)F)C1CC2CC1	M45350
+COC(=O)COc1ccc(cc1)[As](=O)(O)O	M45381
