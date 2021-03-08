@@ -181,7 +181,7 @@ case $ptype in
         retcode=$?
         ;;
     15) echo "Drug-Induced Choleostasis"
-        $FPGEN -output $FPOUT -fptype RAD2D -mol $molfile
+        $FPGEN -output $FPOUT -fptype MOLPRINT2D -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_choleostasis.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
@@ -266,7 +266,7 @@ case $ptype in
         retcode=$?
         ;;
     32) echo "Human Plasma Protein Binding"
-        $FPGEN -output $FPOUT -fptype FCFP4 -mol $molfile
+        $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_PPB.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
@@ -356,7 +356,7 @@ case $ptype in
         retcode=$?
         ;;
     50) echo "pKa dissociation constant"
-        $FPGEN -output $FPOUT -fptype MACCS -mol $molfile
+        $FPGEN -output $FPOUT -fptype ECFP2 -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_pka.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
