@@ -2,7 +2,6 @@
 
 #==============================================================================
 # Software locations
-#== CHANGE THESE AS REQUIRED ==
 FPGEN="java -jar FINGERPRINTER/FingerprintGenerator.jar"
 RSCRIPT="/usr/bin/Rscript"
 PREDICTIONSCRIPTS="PREDICTORS/"
