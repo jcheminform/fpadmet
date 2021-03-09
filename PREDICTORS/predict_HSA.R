@@ -3,6 +3,7 @@ library(ranger)
 library(randomForest)
 
 
+
 args = commandArgs(trailingOnly=TRUE)
 
 fpfile = args[1]
@@ -22,7 +23,7 @@ if (applyadan) {
 	## estimate conditional standard deviation
 	yhat_unc <- predict(fittedqrfmodel, X, what=sd, type = "se")
 	
-	Z <- data.frame(format(yhat$se, digits=2, nsmall=2), format(yhat_unc, digits=2, nsmall=2))
+	Z <- data.frame(format(yhat, digits=2, nsmall=2), format(yhat_unc$se, digits=2, nsmall=2))
 	colnames(Z) <- c("Predicted", "Uncertainty")
 	rownames(Z) <- rownames(X)
 	write.table(Z, file=outfile, quote = F)
