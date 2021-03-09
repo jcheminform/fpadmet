@@ -65,6 +65,7 @@ function usage() {
    echo "53: Drug affinity to human serum albumin"
    echo "54: MDCK permeability"
    echo "55: 50% hemolytic dose"
+   echo "56: Skin Penetration"
    echo "==================================================================="
 }
 
@@ -382,6 +383,11 @@ case $ptype in
     55) echo "50% hemolytic dose"
         $FPGEN -output $FPOUT -fptype ASP -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_HD50.R" $FPOUT $PREDOUT $adan
+        retcode=$?
+        ;;
+    56) echo "Skin penetration"
+        $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
+        $RSCRIPT $PREDICTIONSCRIPTS"/predict_skinpen.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
     *)  echo "ERROR: Ill-defined task number."
