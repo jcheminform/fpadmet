@@ -91,6 +91,7 @@ bash runadmet.sh -f molecule.smi -p ## -a
 53: Drug affinity to human serum albumin
 54: MDCK permeability
 55: 50% hemolytic dose
+56: Skin penetration
 ```
 
 
