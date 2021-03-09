@@ -1,7 +1,5 @@
 library(caret)
 library(ranger)
-library(randomForest)
-library(quantregForest)
 
 
 args = commandArgs(trailingOnly=TRUE)
@@ -21,9 +19,9 @@ if (applyadan) {
 	X <- rbind(fittedmodel$trainingData[1, 1:(ncol(fittedmodel$trainingData)-1)], X) 
 	X <- X[-1,]
 	## estimate conditional standard deviation
-	yhat_unc <- predict(fittedqrfmodel, newdata = X, what=sd)
+	yhat_unc <- predict(fittedqrfmodel, X, what=sd, type = "se")
 	
-	Z <- data.frame(yhat, format(yhat_unc, digits=2, nsmall=2))
+	Z <- data.frame(format(yhat, digits=2, nsmall=2), format(yhat_unc$se, digits=2, nsmall=2))
 	colnames(Z) <- c("Predicted", "Uncertainty")
 	rownames(Z) <- rownames(X)
 	write.table(Z, file=outfile, quote = F)
