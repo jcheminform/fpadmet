@@ -4,7 +4,7 @@
 # Software locations
 FPGEN="java -jar FINGERPRINTER/FingerprintGenerator.jar"
 RSCRIPT="/usr/bin/Rscript"
-PREDICTIONSCRIPTS="PREDICTORS/"
+PREDICTIONSCRIPTS="PREDICTORS"
 FPOUT="RESULTS/fps.txt"
 PREDOUT="RESULTS/predicted.txt"
 #==============================================================================
