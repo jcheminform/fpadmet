@@ -131,7 +131,7 @@ The steady state volume of distribution ($$$VD_{ss}$$$), is a pharmacokinetic pa
 
 ## $$$LD_{50}$$$ rat acute oral toxicity
 The median lethal dose for rodent oral acute toxicity ($$$LD_{50}$$$) is required to categorize chemicals in terms of the potential hazard posed to human health after acute exposure. Here we use the EPA hazard classification
-EPA’s 4-category hazard classification [20]:
+EPA’s 4-category hazard classification:
 1. Category I ($$$LD_{50} \leq $$$ 50 mg/kg) is the highest toxicity category.
 2. Category II (moderately toxic) includes chemicals with 50 < $$$LD_{50} \leq 500$$$ mg/kg.
 3. Category III (slightly toxic) includes chemicals with 500 < $$$LD_{50}$$$ ≤ 5000 mg/kg. Safe chemicals
