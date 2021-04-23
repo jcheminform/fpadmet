@@ -57,8 +57,16 @@ function usage() {
    echo "35: Drug-induced Ototoxicity"
    echo "36: Rhabdomyolysis"
    echo "37: T1/2 Human/Mouse/Rat"
-   echo "40: Cytotoxicity HepG2/NIH 3T3/HEK 293/CRL-7250/HaCat cell line"
-   echo "45: CYP450 1A2/2C19/2D6/3A4/2C9 Inhibition"
+   echo "40: Cytotoxicity HepG2/NIH cell line"
+   echo "41: Cytotoxicity NIH-3T3 cell line"
+   echo "42: Cytotoxicity HEK-293 cell line"
+   echo "43: Cytotoxicity CRL-7250 cell line"
+   echo "44: Cytotoxicity HaCat cell line"
+   echo "45: CYP450 1A2 Inhibition"
+   echo "46: CYP450 2C19 Inhibition"
+   echo "47: CYP450 2D6 Inhibition"
+   echo "48: CYP450 3A4 Inhibition"
+   echo "49: CYP450 2C9 Inhibition"
    echo "50: pKa dissociation constant"
    echo "51: logD Distribution coefficient (pH 7.4)"
    echo "52: logS"
@@ -335,22 +343,22 @@ case $ptype in
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_cyp1a2.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
-    45) echo "CYP450 2C19 Inhibition"
+    46) echo "CYP450 2C19 Inhibition"
         $FPGEN -output $FPOUT -fptype ECFP4 -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_cyp2c19.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
-    45) echo "CYP450 2C9 Inhibition"
+    47) echo "CYP450 2C9 Inhibition"
         $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_cyp2c9.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
-    45) echo "CYP450 2D6 Inhibition"
+    48) echo "CYP450 2D6 Inhibition"
         $FPGEN -output $FPOUT -fptype FCFP4 -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_cyp2d6.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
-    45) echo "CYP450 3A4 Inhibition"
+    49) echo "CYP450 3A4 Inhibition"
         $FPGEN -output $FPOUT -fptype FCFP6 -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_cyp3a4.R" $FPOUT $PREDOUT $adan
         retcode=$?
