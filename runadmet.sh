@@ -24,7 +24,7 @@ function usage() {
    echo "Provide the number corresponding to the property to be predicted"
    echo "=================================================================="
    echo " 1: Anticommensal Effect on Human Gut Microbiota"
-   echo " 2: Bloodâ€“brain-barrier penetration"
+   echo " 2: Blood-brain-barrier penetration"
    echo " 3: Oral Bioavailability"
    echo " 4: AMES Mutagenecity"
    echo " 5: Metabolic Stability"
