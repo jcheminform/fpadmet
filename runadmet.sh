@@ -27,7 +27,7 @@ function usage() {
    echo " 2: Blood-brain-barrier penetration"
    echo " 3: Oral Bioavailability"
    echo " 4: AMES Mutagenecity"
-   echo " 5: Metabolic Stability"
+   echo " 5: Metabolic Stability (Metabolic Intrinsic Clearance)"
    echo " 6: Rat Acute LD50"
    echo " 7: Drug-Induced Liver Inhibition"
    echo " 8: HERG Cardiotoxicity"
@@ -140,7 +140,7 @@ case $ptype in
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_ames.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
-    5)  echo "Metabolic Stability"
+    5)  echo "Metabolic Stability (Metabolic Intrinsic Clearance)"
         $FPGEN -output $FPOUT -fptype FCFP4 -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_metabolicstability.R" $FPOUT $PREDOUT $adan
         retcode=$?
