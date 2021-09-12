@@ -125,7 +125,7 @@ case $ptype in
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_anticommensal.R" $FPOUT $PREDOUT $adan 
         retcode=$?
         ;; 
-    2)  echo "Bloodâ€“brain-barrier penetration"
+    2)  echo "Blood-brain-barrier penetration"
         $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_bbbp.R" $FPOUT $PREDOUT $adan 
         retcode=$?
