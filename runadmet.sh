@@ -74,6 +74,8 @@ function usage() {
    echo "54: MDCK permeability"
    echo "55: 50% hemolytic dose"
    echo "56: Skin Penetration"
+   echo "57: CYP450 2C8 Inhibition"
+   echo "58: Aqueous Solubility (in phosphate saline buffer)"
    echo "==================================================================="
 }
 
@@ -396,6 +398,16 @@ case $ptype in
     56) echo "Skin penetration"
         $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
         $RSCRIPT $PREDICTIONSCRIPTS"/predict_skinpen.R" $FPOUT $PREDOUT $adan
+        retcode=$?
+        ;;
+    57) echo "CYP450 2C8 Inhibition"
+        $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
+        $RSCRIPT $PREDICTIONSCRIPTS"/predict_cyp2c8.R" $FPOUT $PREDOUT $adan
+        retcode=$?
+        ;;
+    58) echo "Aqueous Solubility (in phosphate saline buffer)"
+        $FPGEN -output $FPOUT -fptype PUBCHEM -mol $molfile
+        $RSCRIPT $PREDICTIONSCRIPTS"/predict_AQSOL.R" $FPOUT $PREDOUT $adan
         retcode=$?
         ;;
     *)  echo "ERROR: Ill-defined task number."
