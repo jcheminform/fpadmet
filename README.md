@@ -93,4 +93,9 @@ bash runadmet.sh -f molecule.smi -p ## -a
 56: Skin penetration
 ```
 
+## Citing FP-ADMET
+If you use FP-ADMET in your work, kindly cite the following paper 
+
+Venkatraman, V. FP-ADMET: a compendium of fingerprint-based ADMET prediction models. J Cheminform 13, 75 (2021). https://doi.org/10.1186/s13321-021-00557-5
+
 
